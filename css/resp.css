@@ -1,0 +1,214 @@
+@media screen and (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav {
+        height: 68px;
+        background-color: #1400FF;
+    }
+
+    .logo {
+        margin: 7px;
+    }
+
+    .logo img {
+        width: 60px;
+        border: none;
+    }
+
+    .nav ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .nav ul li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav ul li a {
+        padding: 7px;
+        margin: 0;
+    }
+
+    .menu {
+        flex-direction: column;
+        top: 18px;
+        left: 0;
+    }
+
+    .mainMenu {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 55%;
+        z-index: 1;
+        position: absolute;
+        background-color: #1E1926;
+    }
+
+    .mainMenu .item:first-child {
+        margin-top: 15px;
+    }
+
+    .item {
+        padding: 10px;
+    }
+
+    .openMenu,
+    .closeMenu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 18px;
+        right: 20px;
+        width: 32px;
+        font-size: 33px;
+        color: #FCF8FF;
+    }
+
+    .search-container {
+        padding: 10px;
+        left: 0;
+    }
+
+    #search {
+        margin-right: 0;
+        padding: 0 10px;
+        border: 0;
+        height: 39.5px;
+    }
+
+    input[type="text"] {
+        width: 210px;
+    }
+
+    .search-container input:focus {
+        outline: none;
+    }
+
+    .search-container button {
+        height: 40.5px;
+        margin-left: 0;
+        border: 0;
+        color: #FCF8FF;
+    }
+
+    .btn {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border: 0;
+        position: relative;
+        background-color: #955BFF;
+    }
+
+    .user {
+        margin-left: 25px;
+    }
+
+    #userIcon {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        font-size: 21px;
+        border-radius: 15%;
+        background-color: #FCF8FF;
+    }
+
+    .userbtn {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 35%;
+        position: absolute;
+        top: 0px;
+        left: 0;
+        z-index: 1;
+        background-color: #1E1926;
+    }
+
+    .userbtn.active {
+        display: flex;
+    }
+
+    .user button {
+        margin: 10px;
+    }
+
+    .card {
+        margin: 17px;
+        margin-bottom: 25px;
+        max-width: 100%;
+    }
+
+    .card h2 {
+        margin: 10px;
+    }
+
+    .card-item {
+        margin: 12px;
+        width: 210px;
+        border-radius: 0;
+        border: 2px solid white;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    .card-item:hover {
+        border-radius: 0;
+    }
+
+    .card-item img {
+        height: 330px;
+        border-radius: 0;
+    }
+
+    .lines p {
+        border-radius: 0;
+    }
+
+    .foot {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+    }
+
+    .contact::before {
+        background-position: -242px;
+    }
+
+    .contact {
+        padding: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .container .contactInfo {
+        border-radius: 4%;
+        margin-bottom: 40px;
+        margin-right: 0;
+    }
+
+    .container .contactInfo .box {
+        padding: 10px;
+    }
+
+    .container .contactInfo,
+    .contactForm {
+        width: 100%;
+    }
+
+    .contactForm {
+        padding: 20px;
+    }
+}

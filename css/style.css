@@ -3,8 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@500&display=swap');
 
 :root {
-    --bg-color: rgb(237, 229, 229);
-    --main-bg-color: #1400ff;
+    --bg-color: #FCF8FF;
+    --main-bg-color: #1400FF;
 }
 
 * {
@@ -21,143 +21,160 @@ header {
 }
 
 nav {
-    height: 80px;
     display: flex;
     align-items: center;
+    height: 73px;
 }
 
 .logo {
-    width: 238px;
-    margin-left: 20px;
+    width: 220px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.logo a {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 7px;
+    text-decoration: none;
 }
 
 .logo:hover {
     border-radius: 7px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
-    background-color: #3d2bff;
-    cursor: pointer;
 }
 
 .logo img,
 .logo h1 {
-    height: 80px;
-    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
     padding: 0 7px;
-    font-family: 'Signika Negative';
     color: white;
     font-size: 25px;
     text-align: center;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    transition: all 0.1s ease;
+    font-family: 'Signika Negative';
 }
 
-nav ul {
-    width: 440px;
+.mainMenu {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    flex: 1;
 }
 
-nav ul li {
+.menu {
+    display: flex;
+    align-items: center;
     list-style: none;
-    font-size: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    position: relative;
+    left: 25px;
 }
 
-nav ul li a {
-    font-family: 'Skranji';
-    color: white;
+.item {
+    padding: 15px;
+}
+
+.item a {
+    font-family: 'Signika Negative';
     text-decoration: none;
-}
-
-nav ul li a:hover {
     font-size: 22px;
-    color: #ED9ED6;
+    color: white;
+    padding: 5px;
 }
 
-.search {
-    width: 370px;
+.item a:hover {
+    border-radius: 4px;
+    color: #F0A6FF;
+    background-color: #0066FF;
+}
+
+.openMenu,
+.closeMenu {
+    display: none;
+}
+
+.fa-user {
+    display: none !important;
+}
+
+.search-container {
     display: flex;
     align-items: center;
     position: relative;
-    left: 240px;
+    left: 85px;
 }
 
-.search input {
+.search-container input {
     height: 40px;
-    border-radius: 7px 0 0 7px;
     padding: 0 12px;
+    border-radius: 7px 0 0 7px;
     font-size: 21px;
     border: 2px solid black;
+    font-family: monospace;
 }
 
-.search input:focus {
-    width: 256px;
+input[type="text"] {
+    width: 225px;
+}
+
+.search-container input:focus {
     outline: none;
-    font-family: 'Skranji';
 }
 
-.search button {
+.search-container button {
     height: 43px;
-    font-size: 21px;
-    border-radius: 0 7px 7px 0;
     margin-left: -2px;
-    border: 2px solid black;
+    font-size: 21px;
     color: black;
-    font-family: 'Signika Negative';
+    font-family: monospace;
+    border-radius: 0 7px 7px 0;
+    border: 2px solid black;
 }
 
 .btn {
     padding: 5px 10px;
-    color: white;
-    background: var(--main-bg-color);
     border-radius: 7px;
     cursor: pointer;
+    color: white;
+    background: var(--main-bg-color);
 }
 
-.search button:hover {
-    background-color: #3d2bff;
+.search-container button:hover {
+    background-color: #955BFF;
     border-color: 2px solid black;
 }
 
 .user {
-    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 7px;
-    position: relative;
-    left: 270px;
+    height: 40px;
+    margin-right: 22px;
 }
 
 .user button {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 21px;
     border: 0px;
+    padding: 5.5px;
+    border-radius: 7px;
     background-color: transparent;
-    padding: 5px;
     color: white;
+    font-size: 21px;
     font-family: 'Playpen Sans';
 }
 
 .user button:hover {
     color: black;
     font-weight: bold;
+    background-color: #B978FF;
 }
 
 .card {
-    background-color: white;
+    background-color: aliceblue;
     max-width: 90vw;
     margin: 25px auto;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
     border-radius: 7px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .cards {
@@ -176,18 +193,18 @@ nav ul li a:hover {
     justify-content: center;
     flex-direction: column;
     margin: 0 15px;
-    border: 2px solid black;
     width: 250px;
     border-radius: 7px;
     margin-bottom: 15px;
     position: relative;
+    border: 2px solid black;
 }
 
 .card-item:hover {
+    cursor: pointer;
     border-radius: 7px;
     border: 2px solid transparent;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
-    cursor: pointer;
 }
 
 .card-item img {
@@ -196,32 +213,38 @@ nav ul li a:hover {
 
 .lines {
     display: flex;
-    justify-content: center;
     position: absolute;
     bottom: 0;
     width: 100%;
 }
 
 .lines p {
+    display: grid;
+    align-items: center;
     height: 28px;
     width: 250px;
-    font-size: 20px;
+    font-size: 22px;
     text-align: center;
-    background-color: #3d2bff;
     border-radius: 5px;
+    background-color: #AA00AC;
 }
 
 .container {
     min-height: calc(100vh - 58px - 12vh);
 }
 
-.flex-all-center {
-    height: 50px;
+.back {
     display: flex;
-    color: white;
-    font-size: 20px;
     align-items: center;
     justify-content: center;
-    background-color: #363062;
+    height: 66px;
+    background-color: #0066FF;
+}
+
+.back p {
+    padding: 7px;
+    font-size: 1.3rem;
+    color: white;
+    text-align: center;
     font-family: 'Signika Negative';
 }

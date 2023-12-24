@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Display - TechFrames</title>
+    <link rel="icon" href="../images/icon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/resp.css">
+    <link rel="text/html" href="../html/index.html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .card {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 30px !important;
+            margin-bottom: 30px !important;
+        }
+
+        .card-item {
+            width: calc(20% - 34px);
+            margin: 15px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .card {
+                margin: 0;
+                padding: 10px;
+            }
+
+            .card-item {
+                width: calc(72% - 100px);
+                margin: 5px;
+                box-shadow: 4px 3px 9px rgba(0, 0, 0, 0.7);
+            }
+
+            .card-item:hover {
+                box-shadow: 4px 3px 9px rgba(0, 0, 0, 0.7);
+            }
+
+            .card-item img {
+                height: 260px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="nav nav-list">
+            <div class="logo">
+                <a href="../html/index.html">
+                    <img src="../images/icon.webp" alt="Image Not Found">
+                    <h1>TechFrames</h1>
+                </a>
+            </div>
+            <div class="openMenu"><i class="fa fa-bars"></i></div>
+            <ul class="mainMenu">
+                <div class="closeMenu"><i class="fa fa-times"></i></div>
+                <div class="menu">
+                    <li class="item"><a href="../html/index.html">Home</a></li>
+                    <li class="item"><a href="../html/dynamic.html">D - Display</a></li>
+                    <li class="item"><a href="../html/about.html">About</a></li>
+                    <li class="item"><a href="../html/contact.html">Contact Us</a></li>
+                    <div class="search-container">
+                        <input type="text" name="search" id="search" placeholder="Search">
+                        <button class="btn">Search</button>
+                    </div>
+                </div>
+            </ul>
+            <div class="user">
+                <i class="fa-solid fa-user user-icon" id="userIcon"></i>
+                <div class="userbtn">
+                    <button class="butn" id="signupButton">Sign Up</button>
+                    <button class="butn" id="signinButton">Sign In</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="card">
+            <!-- Images will be dynamically added here -->
+        </div>
+    </div>
+    <footer class="back">
+        <p class="foot">Copyright &copy; 2023 TechFrames | All Rights Reserved</p>
+    </footer>
+    <script src="../script/script.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const backgrounds = [
+                { src: '../images/image1.webp' },
+                { src: '../images/image2.webp' },
+                { src: '../images/image3.webp' },
+                { src: '../images/image4.webp' },
+                { src: '../images/image5.webp' },
+                { src: '../images/image6.webp' },
+                { src: '../images/image7.webp' },
+                { src: '../images/image8.webp' },
+                { src: '../images/image9.webp' },
+                { src: '../images/image10.webp' },
+            ];
+
+            function shuffleArray(array) {
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+            }
+
+            const cardsContainer = document.querySelector('.card');
+
+            function createCardItem(imageSrc) {
+                const cardItem = document.createElement('div');
+                cardItem.classList.add('card-item');
+                const img = document.createElement('img');
+                img.src = imageSrc;
+                img.alt = 'Image Not Found!!!';
+                cardItem.appendChild(img);
+                return cardItem;
+            }
+
+            function showImagesInLoop() {
+                shuffleArray(backgrounds);
+                cardsContainer.innerHTML = '';
+
+                backgrounds.forEach(image => {
+                    const cardItem = createCardItem(image.src);
+                    cardsContainer.appendChild(cardItem);
+                });
+            }
+
+            showImagesInLoop();
+            setInterval(showImagesInLoop, 5000);
+        });
+    </script>
+    <script>
+        document.getElementById('signupButton').addEventListener('click', function () {
+            window.location.href = '../html/signup.html';
+        });
+        document.getElementById('signinButton').addEventListener('click', function () {
+            window.location.href = '../html/signin.html';
+        });
+    </script>
+</body>
+
+</html>

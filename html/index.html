@@ -5,32 +5,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechFrames</title>
-    <link rel="shortcut icon" href="../images/icon.webp">
+    <title>TechFrames - Web Gallery</title>
+    <link rel="icon" href="../images/icon.webp" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="../css/resp.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
     <header>
-        <nav>
+        <nav class="nav nav-list">
             <div class="logo">
-                <img src="../images/icon.webp" alt="Image Not Found!!!">
-                <h1>TechFrames</h1>
+                <a href="../html/index.html">
+                    <img src="../images/icon.webp" alt="Image Not Found">
+                    <h1>TechFrames</h1>
+                </a>
             </div>
-            <ul class="nav-list">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="recent.html">Recent</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+            <div class="openMenu"><i class="fa fa-bars"></i></div>
+            <ul class="mainMenu">
+                <div class="closeMenu"><i class="fa fa-times"></i></div>
+                <div class="menu">
+                    <li class="item"><a href="../html/index.html">Home</a></li>
+                    <li class="item"><a href="../html/dynamic.html">D - Display</a></li>
+                    <li class="item"><a href="../html/about.html">About</a></li>
+                    <li class="item"><a href="../html/contact.html">Contact Us</a></li>
+                    <div class="search-container">
+                        <input type="text" name="search" id="search" placeholder="Search">
+                        <button class="btn">Search</button>
+                    </div>
+                </div>
             </ul>
-            <div class="search">
-                <input type="text" placeholder="Search">
-                <button class="btn">Search</button>
-            </div>
             <div class="user">
-                <button class="butn">Sign Up</button>
-                <button class="butn">Login</button>
+                <i class="fa-solid fa-user user-icon" id="userIcon"></i>
+                <div class="userbtn">
+                    <button class="butn" id="signupButton">Sign Up</button>
+                    <button class="butn" id="signinButton">Sign In</button>
+                </div>
             </div>
         </nav>
     </header>
@@ -197,9 +207,18 @@
             </div>
         </div>
     </main>
-    <footer class="flex-all-center">
-        <p>Copyright &copy; 2023 TechFrames | All Rights Reserved</p>
+    <footer class="back">
+        <p class="foot">Copyright &copy; 2025 TechFrames | All Rights Reserved</p>
     </footer>
+    <script src="../script/script.js"></script>
+    <script>
+        document.getElementById('signupButton').addEventListener('click', function () {
+            window.location.href = '../html/signup.html';
+        });
+        document.getElementById('signinButton').addEventListener('click', function () {
+            window.location.href = '../html/signin.html';
+        });
+    </script>
 </body>
 
 </html>

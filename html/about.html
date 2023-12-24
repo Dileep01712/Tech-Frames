@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - TechFrames</title>
+    <link rel="icon" href="../images/icon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/resp.css">
+    <link rel="stylesheet" href="../css/aboutStyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav nav-list">
+            <div class="logo">
+                <a href="../html/index.html">
+                    <img src="../images/icon.webp" alt="Image Not Found">
+                    <h1>TechFrames</h1>
+                </a>
+            </div>
+            <div class="openMenu"><i class="fa fa-bars"></i></div>
+            <ul class="mainMenu">
+                <div class="closeMenu"><i class="fa fa-times"></i></div>
+                <div class="menu">
+                    <li class="item"><a href="../html/index.html">Home</a></li>
+                    <li class="item"><a href="../html/dynamic.html">D - Display</a></li>
+                    <li class="item"><a href="../html/about.html">About</a></li>
+                    <li class="item"><a href="../html/contact.html">Contact Us</a></li>
+                    <div class="search-container">
+                        <input type="text" name="search" id="search" placeholder="Search">
+                        <button class="btn">Search</button>
+                    </div>
+                </div>
+            </ul>
+            <div class="user">
+                <i class="fa-solid fa-user user-icon" id="userIcon"></i>
+                <div class="userbtn">
+                    <button class="butn" id="signupButton">Sign Up</button>
+                    <button class="butn" id="signinButton">Sign In</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="about">
+        <div class="content">
+            <h2>About</h2>
+        </div>
+        <div class="center">
+            <div class="center-box">
+                <h2>Introduction</h2>
+                <img src="../images/box1.webp" alt="Not Found">
+                <p>Welcome to TechFrames - Your Ultimate Web Gallery
+                    At TechFrames, we redefine the digital experience by offering a cutting-edge Web Gallery designed
+                    for enthusiasts, creators, and anyone passionate about visual storytelling. Our platform is more
+                    than just a space for your images; it's a canvas for your moments, an archive for your creativity.
+                </p>
+            </div>
+            <div class="center-box">
+                <h2>History</h2>
+                <img src="../images/box2.webp" alt="Not Found" style="width: 250px; top: 0; margin: 0;">
+                <p style="position: relative;top: -15px;">Welcome to TechFrames – Your Digital Canvas for Memories!
+                    TechFrames was born out of a passion for
+                    visual storytelling and the desire to provide a platform that celebrates creativity through images.
+                    Our web gallery is designed to be your personal space to showcase, share, and cherish moments
+                    captured in pixels. Whether you're a photography enthusiast, an artist, or someone who appreciates
+                    the beauty of visual art, TechFrames is here to be your digital haven.</p>
+            </div>
+            <div class="center-box">
+                <h2>Features</h2>
+                <img src="../images/box3.webp" alt="Not Found" style="width: 285px; top: -5px;">
+                <p>TechFrames is more than just a gallery; it's a dynamic platform designed to elevate your digital
+                    image management experience. With a sleek and user-friendly interface, TechFrames empowers you to
+                    effortlessly delete, upload, and organize your images. Privacy is paramount, and our secure deletion
+                    options ensure your content remains confidential.</p>
+            </div>
+        </div>
+    </section>
+    <footer class="back">
+        <p class="foot">Copyright &copy; 2023 TechFrames | All Rights Reserved</p>
+    </footer>
+    <script src="../script/script.js"></script>
+    <script>
+        document.getElementById('signupButton').addEventListener('click', function () {
+            window.location.href = '../html/signup.html';
+        });
+        document.getElementById('signinButton').addEventListener('click', function () {
+            window.location.href = '../html/signin.html';
+        });
+    </script>
+</body>
+
+</html>
